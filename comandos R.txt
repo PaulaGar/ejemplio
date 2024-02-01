@@ -1,0 +1,26 @@
+CARGAR DATOS-------------------------
+datos <- read.csv(file = 'ht21.csv', header = TRUE)
+datos
+hist (datos$Peso.gr.)
+INSTALAR LIBRERIAS-----------------
+install.packages("MASS")
+install.packages("survival")
+install.packages("fitdistrplus")
+
+library(MASS)
+library(survival)
+library(fitdistrplus)
+
+PRUEBAS DE AJUSTE---------------------
+
+ajuste <- fitdist(datos$Tarde, "pois")
+prueba <- gofstat(ajuste)
+prueba
+
+ajuste <- fitdist(datos$Noche, "geom")
+
+ajuste <- fitdist(datos$Noche, "unif")
+
+ajuste <- fitdist(datos$Tarde, "norm")
+
+ajuste <- fitdist(datos$Tarde, "weibull")
