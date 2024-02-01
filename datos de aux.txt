@@ -1,0 +1,4 @@
+Introducción a la programación y computación 2
+Sección C
+tutora: Paula Gabriela García Reinoso
+carnet: 201700823 
